@@ -28,6 +28,12 @@
           "index",
           "quickstart"
         ]
+      },
+      {
+        "group": "Support",
+        "pages": [
+          "contact-support"
+        ]
       }
     ],
     "global": {
@@ -48,8 +54,8 @@
   "navbar": {
     "links": [
       {
-        "label": "Create a ticket",
-        "href": "https://feedelity.tawk.help/#create-ticket"
+        "label": "Submit a ticket",
+        "href": "mailto:tickets@feedelity-au0lw6.p.tawk.email?subject=Support%20request"
       },
       {
         "label": "Support",
