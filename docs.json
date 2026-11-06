@@ -26,7 +26,58 @@
         "group": "Getting Started",
         "pages": [
           "index",
-          "quickstart"
+          "quickstart",
+          "getting-started/product-tour"
+        ]
+      },
+      {
+        "group": "Inbox",
+        "pages": [
+          "inbox/inbox",
+          "inbox/bulk-send"
+        ]
+      },
+      {
+        "group": "Reporting",
+        "pages": [
+          "reporting/dashboard",
+          "reporting/locations",
+          "reporting/ratings"
+        ]
+      },
+      {
+        "group": "Collecting feedback",
+        "pages": [
+          "collecting-feedback/five-star-reviews",
+          "collecting-feedback/reservation-system",
+          "collecting-feedback/wheel-of-fortune"
+        ]
+      },
+      {
+        "group": "Integrations",
+        "pages": [
+          "integrations/overview",
+          "integrations/google",
+          "integrations/tripadvisor",
+          "integrations/meta",
+          "integrations/uber-eats",
+          "integrations/deliveroo",
+          "integrations/just-eat-takeaway",
+          "integrations/outlook",
+          "integrations/zenchef"
+        ]
+      },
+      {
+        "group": "Settings",
+        "pages": [
+          "settings/locations",
+          "settings/location-groups",
+          "settings/users",
+          "settings/security",
+          "settings/tags",
+          "settings/red-flags",
+          "settings/response-agents",
+          "settings/response-templates"
         ]
       },
       {
