@@ -3,7 +3,7 @@
 // (missing ID, ad blocker, slow network) they fall back to the help center.
 // ponytail: IDs from tawk.to → Administration → Chat Widget
 var TAWK_PROPERTY_ID = "68c2cb59e040891921fd9d95";
-var TAWK_WIDGET_ID = ""; // TODO: fill in, e.g. "1j5abcdef"
+var TAWK_WIDGET_ID = "1j4sekled";
 
 if (TAWK_WIDGET_ID && !window.Tawk_API) {
   // The embed script reads these globals, so set them on window explicitly.
