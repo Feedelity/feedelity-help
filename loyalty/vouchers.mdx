@@ -1,0 +1,49 @@
+---
+title: "Vouchers"
+description: "See every voucher your guests received, with its unique code."
+---
+
+A voucher is one guest's copy of an [offer](/loyalty/offers). Each voucher has a unique code that the guest shows to redeem it with you.
+
+<Note>
+  Loyalty (games, offers, and vouchers) is included in the trial and the Standard plan. On the Enterprise plan, it's an add-on. If your plan doesn't include it, **Games**, **Offers**, and **Vouchers** are grayed out in **Settings** with a lock and an **Add-on** label. Contact your account manager to add it.
+</Note>
+
+## How guests get vouchers
+
+When a guest wins a prize in one of your [games](/loyalty/games), Feedelity issues a voucher for that offer:
+
+<Steps>
+  <Step title="Voucher is created">
+    Feedelity generates a unique code, or takes the next available code from the offer's code pool. The code is marked as issued, so it's never reused.
+  </Step>
+  <Step title="Voucher is sent">
+    The guest receives the voucher by email, with the offer details and their unique code. You can [customize this email](/loyalty/offers#customize-the-voucher-email).
+  </Step>
+  <Step title="Voucher is tracked">
+    Every voucher and its code is listed on the **Vouchers** page.
+  </Step>
+</Steps>
+
+{/* TODO: en.json says vouchers can also be sent "from the inbox"; no inbox UI for sending offers exists yet. Document it once it ships. */}
+
+<Note>
+  Delivery platform credit is different. When you [reply to a Deliveroo or Uber Eats review](/inbox/replying#add-credit-to-a-reply), you can add credit that's applied to the guest's next order on that platform. That credit isn't an offer, and it doesn't appear on the **Vouchers** page.
+</Note>
+
+## View vouchers
+
+Go to **Settings** > **Vouchers**, in the **Loyalty** section. The list shows each voucher's **Code**, **Offer**, **Customer** email, and when it was **Issued**.
+
+- Search by email address or code.
+- Filter by offer or by date range.
+
+Click a voucher to see its details and the exact **Email** the guest received. From there, click **View offer** to open the offer.
+
+{/* SCREENSHOT: /settings/vouchers — the vouchers list with the offer filter and search */}
+
+Use the code to look up which guest received which voucher, for example when a guest redeems it at the counter.
+
+<Note>
+  Feedelity doesn't track redemptions or expiry dates. Record redemptions in your POS system.
+</Note>

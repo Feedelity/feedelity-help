@@ -1,0 +1,255 @@
+---
+title: "Endpoints"
+description: "Export cases, messages, and tags."
+---
+
+The Data Export API has three endpoints. All of them are `GET` requests under `https://api.feedelity.io/v1` and need your [API key](/api/authentication).
+
+| Endpoint | Returns |
+| --- | --- |
+| [`GET /v1/cases`](#list-cases) | Cases with their messages and tags, paginated |
+| [`GET /v1/locations`](#list-locations) | All locations of your organization |
+| [`GET /v1/tags`](#list-tags) | All tags of your organization |
+
+Messages don't have their own endpoint. Each case includes its messages.
+
+<Tip>
+  The API also serves an interactive OpenAPI reference at `https://api.feedelity.io/docs` and the raw spec at `https://api.feedelity.io/openapi.json`.
+</Tip>
+
+## List cases
+
+```http
+GET /v1/cases
+```
+
+Returns your cases, newest first. A case is one piece of feedback, such as a review, message, or email, with all its replies.
+
+### Query parameters
+
+<ParamField query="order_by" type="string" default="updated_at">
+  The timestamp to sort and filter on: `updated_at` or `created_at`. Results are always sorted newest first.
+</ParamField>
+
+<ParamField query="after" type="string">
+  Only return cases where the `order_by` field is at or after this time. Use ISO 8601, for example `2025-01-15T14:30:00Z`.
+</ParamField>
+
+<ParamField query="limit" type="integer" default="20">
+  The number of cases per page, from `1` to `50`.
+</ParamField>
+
+<ParamField query="cursor" type="string">
+  The `next_cursor` value from the previous page. Leave it out for the first page.
+</ParamField>
+
+<ParamField query="expand" type="string">
+  Add optional fields to the response. Supported value: `contact`, which fills in the `contact` of each message.
+</ParamField>
+
+### Example request
+
+```bash
+curl "https://api.feedelity.io/v1/cases?after=2025-01-15T00:00:00Z&limit=50" \
+  -H "Authorization: YOUR_API_KEY"
+```
+
+### Example response
+
+```json
+{
+  "data": [
+    {
+      "id": "3f1c2a9e-8b7d-4c1e-9a52-1d2e3f4a5b6c",
+      "source": "google",
+      "location_id": "7a8b9c0d-1e2f-4a3b-8c4d-5e6f7a8b9c0d",
+      "rating": 2.0,
+      "messages": [
+        {
+          "id": "c1d2e3f4-a5b6-4c7d-8e9f-0a1b2c3d4e5f",
+          "type": "outbound",
+          "title": null,
+          "content": "We're sorry your fries were cold. We've shared this with the team.",
+          "created_at": "2025-01-16T09:12:00Z",
+          "contact": null
+        },
+        {
+          "id": "b1c2d3e4-f5a6-4b7c-8d9e-0f1a2b3c4d5e",
+          "type": "inbound",
+          "title": null,
+          "content": "Friendly staff, but the fries were cold.",
+          "created_at": "2025-01-15T19:40:00Z",
+          "contact": null
+        }
+      ],
+      "tags": [
+        {
+          "id": "9e8d7c6b-5a4f-4e3d-8c2b-1a0f9e8d7c6b",
+          "message_id": "b1c2d3e4-f5a6-4b7c-8d9e-0f1a2b3c4d5e",
+          "sentiment": "negative"
+        },
+        {
+          "id": "1a2b3c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+          "message_id": "b1c2d3e4-f5a6-4b7c-8d9e-0f1a2b3c4d5e",
+          "sentiment": "positive"
+        }
+      ],
+      "is_flagged": false,
+      "is_deleted": false,
+      "created_at": "2025-01-15T19:40:00Z",
+      "updated_at": "2025-01-16T09:12:00Z"
+    }
+  ],
+  "meta": {
+    "has_more": true,
+    "next_cursor": "eyJpZCI6IDEyMzQ1LCAiY3JlYXRlZF9hdCI6ICIuLi4ifQ=="
+  }
+}
+```
+
+### Case fields
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `id` | UUID | The case ID. |
+| `source` | string | The channel the case came from: `google`, `facebook`, `instagram`, `tripadvisor`, `deliveroo`, `just_eat`, `uber_eats`, `zenchef`, `outlook`, or `feedelity` (Feedelity forms). |
+| `location_id` | UUID or null | The location the case belongs to. Matches `id` from [`GET /v1/locations`](#list-locations). |
+| `rating` | number or null | The customer's rating, for example 1 to 5 stars. |
+| `messages` | array | The messages in the case, newest first. |
+| `tags` | array | The tags on the case, with sentiment. |
+| `is_flagged` | boolean | `true` if the case has a red flag. |
+| `is_deleted` | boolean | `true` if the case was deleted from the inbox and dashboards. |
+| `created_at` | datetime | When the case was created. |
+| `updated_at` | datetime | The last activity on the case, such as a new message, tag, or status change. |
+
+### Message fields
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `id` | UUID | The message ID. |
+| `type` | string | `inbound` for a message from the customer, `outbound` for a reply from your business. |
+| `title` | string or null | The title of the message, if it has one. |
+| `content` | string or null | The text of the message, unmodified. |
+| `created_at` | datetime | When the message was sent or received. |
+| `contact` | object or null | The sender's `name` and `email`. Only filled in with `expand=contact`. `email` is only set for email messages. |
+
+### Case tag fields
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `id` | UUID | The tag ID. Matches `id` from [`GET /v1/tags`](#list-tags). |
+| `message_id` | UUID or null | The message the tag was detected in. `null` for tags added by hand. |
+| `sentiment` | string | `positive`, `neutral`, or `negative`. |
+
+### Pagination
+
+The cases endpoint uses cursor pagination.
+
+1. Request the first page without `cursor`.
+2. If `meta.has_more` is `true`, request the next page with `cursor` set to `meta.next_cursor`. Keep the other parameters the same.
+3. Stop when `meta.next_cursor` is `null`.
+
+Pass the cursor exactly as you got it. Don't build or change it yourself.
+
+### Sync incrementally
+
+To keep a data warehouse up to date, fetch only cases that changed since your last sync:
+
+1. Pass the time of your last successful sync as `after`, and keep `order_by=updated_at`.
+2. Page through the results until `next_cursor` is `null`.
+3. Save the `updated_at` of the first case you got. It's the most recent one. Use it as `after` for your next sync.
+
+Because `after` includes cases at exactly that time, you can get the last case of the previous sync again. Upsert cases by `id` so duplicates don't matter.
+
+Deleted cases stay in the results with `is_deleted: true`. Filter them out if you only want what's in the inbox.
+
+## List locations
+
+```http
+GET /v1/locations
+```
+
+Returns all locations of your organization, sorted by name. This endpoint isn't paginated.
+
+### Example response
+
+```json
+[
+  {
+    "id": "7a8b9c0d-1e2f-4a3b-8c4d-5e6f7a8b9c0d",
+    "external_id": "STORE-042",
+    "name": "Antwerp Central",
+    "phone": "+32 3 123 45 67",
+    "email": "antwerp@example.com",
+    "address": {
+      "address_line_1": "Meir 1",
+      "address_line_2": null,
+      "postal_code": "2000",
+      "city": "Antwerp",
+      "state": null,
+      "country_code": "BE",
+      "latitude": 51.2194,
+      "longitude": 4.4025
+    },
+    "_links": {
+      "inbox": {
+        "href": "https://app.feedelity.io/inbox?locations=123",
+        "type": "text/html",
+        "title": "Feedback inbox for this location"
+      },
+      "dashboard": {
+        "href": "https://app.feedelity.io/analytics/dashboard?locations=123",
+        "type": "text/html",
+        "title": "Analytics dashboard for this location"
+      }
+    }
+  }
+]
+```
+
+### Location fields
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `id` | UUID | The location ID. Cases refer to it in `location_id`. |
+| `external_id` | string or null | Your own ID for the location, such as a POS or CRM code. Set it in **Settings** > **Locations** as **External ID**. |
+| `name` | string | The location name. |
+| `phone` | string or null | The location's phone number. |
+| `email` | string or null | The location's email address. |
+| `address` | object | The address: `address_line_1`, `address_line_2`, `postal_code`, `city`, `state`, `country_code` (ISO 3166-1 alpha-2), `latitude`, and `longitude`. Each can be `null`. |
+| `_links` | object | Links to this location's `inbox` and `dashboard` in the Feedelity app, in [HAL](https://datatracker.ietf.org/doc/html/draft-kelly-json-hal-08) format. |
+
+## List tags
+
+```http
+GET /v1/tags
+```
+
+Returns all tags of your organization, sorted by name. This endpoint isn't paginated.
+
+### Example response
+
+```json
+[
+  {
+    "id": "5c6d7e8f-9a0b-4c1d-8e2f-3a4b5c6d7e8f",
+    "name": "Food",
+    "parent_id": null
+  },
+  {
+    "id": "9e8d7c6b-5a4f-4e3d-8c2b-1a0f9e8d7c6b",
+    "name": "Temperature",
+    "parent_id": "5c6d7e8f-9a0b-4c1d-8e2f-3a4b5c6d7e8f"
+  }
+]
+```
+
+### Tag fields
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `id` | UUID | The tag ID. Case tags refer to it in `id`. |
+| `name` | string | The tag name. |
+| `parent_id` | UUID or null | The parent tag. `null` for a top-level tag. |
+
+Tags form a tree of any depth. To rebuild it, add each tag to the children of the tag whose `id` matches its `parent_id`.

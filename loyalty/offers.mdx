@@ -1,0 +1,85 @@
+---
+title: "Offers"
+description: "Set up rewards you can give to guests."
+---
+
+An offer is a reward you set up once, like a free coffee. Each guest who receives it gets a [voucher](/loyalty/vouchers) with a unique code to redeem with you. Offers are the prizes in your [games](/loyalty/games).
+
+Go to **Settings** > **Offers**, in the **Loyalty** section, to manage your offers.
+
+<Note>
+  Loyalty (games, offers, and vouchers) is included in the trial and the Standard plan. On the Enterprise plan, it's an add-on. If your plan doesn't include it, **Games**, **Offers**, and **Vouchers** are grayed out in **Settings** with a lock and an **Add-on** label. Contact your account manager to add it.
+</Note>
+
+{/* SCREENSHOT: /settings/offers — the offers list, showing an offer with "Automatic codes" and one with "Own codes" */}
+
+## Create an offer
+
+<Steps>
+  <Step title="Start a new offer">
+    Go to **Settings** > **Offers** and click **New offer**.
+  </Step>
+  <Step title="Name and describe the offer">
+    Enter a **Name**, shown as the title of the voucher. Enter a **Description**, shown to guests on their voucher.
+  </Step>
+  <Step title="Choose where the codes come from">
+    Under **Voucher codes**, choose **Generate automatically** or **Use my own codes**. See [Voucher codes](#voucher-codes).
+  </Step>
+  <Step title="Create the offer">
+    Click **Create offer**.
+  </Step>
+</Steps>
+
+Put everything the guest needs to know in the description: what they get, any minimum spend, how long the voucher is valid, and how to redeem it. For example: "Enjoy a free drink of your choice with any purchase. Show this code at the counter. Minimum purchase of €10."
+
+{/* SCREENSHOT: /settings/offers/new — the new offer form with both code options */}
+<Frame>
+  <img src="/images/loyalty/offers/new.png" alt="The new offer form with both voucher code options" width="784" />
+</Frame>
+
+## Voucher codes
+
+Every voucher gets a unique code. You choose where the codes come from when you create the offer:
+
+- **Generate automatically**: Feedelity creates a unique code for each voucher when it's issued. You find every code on the [Vouchers](/loyalty/vouchers) page.
+- **Use my own codes**: paste codes from your POS or loyalty system, one per line. Feedelity takes the next available code from this pool for each voucher, so a code is never reused.
+
+### Manage your code pool
+
+For offers with your own codes, the offer page shows how many **Codes available** are left. The **Codes** table lists every code with its status: **Available** or **Issued**. Click an issued code to view its voucher.
+
+To add more codes, click **Add codes** and paste them, one per line. You can add up to 5,000 codes at a time. Feedelity skips duplicates and codes that are already in the pool.
+
+To download the codes, click **Export**.
+
+The offers list warns you when an offer is **Low on codes** (10 or fewer left) or **Out of codes**. Add more codes before you run out.
+
+{/* TODO: confirm what a guest sees when they win an offer whose code pool is empty */}
+
+{/* SCREENSHOT: /settings/offers/<id> — offer page with Codes available, Vouchers issued, and the Codes table */}
+
+## Customize the voucher email
+
+Every guest who gets an offer receives an email with their voucher. To change it, open the offer and click **Edit** next to **Email template**.
+
+You can edit the **Subject** and the **Body**. Use these placeholders to add offer and voucher details:
+
+| Placeholder | What it is |
+| --- | --- |
+| **Name** | The name of your offer |
+| **Description** | The description of your offer. Use it in the body only. |
+| **Code** | The guest's voucher code |
+| **QR code** | The guest's voucher code as a QR code. Use it in the body only. |
+
+Click **Show preview** to see the result, then click **Save**.
+
+{/* SCREENSHOT: /settings/offers/<id> — the Email template dialog with placeholders and preview */}
+
+## Edit or delete an offer
+
+Open the offer and click **⋯**:
+
+- **Edit offer**: change the name and description.
+- **Delete offer**: remove the offer and its code pool. You can't delete an offer once vouchers have been issued for it.
+
+The **Vouchers issued** count on the offer page shows how many guests received this offer. Click it to see the vouchers.

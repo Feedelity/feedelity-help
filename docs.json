@@ -1,53 +1,178 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "theme": "maple",
+  "name": "Feedelity",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#1A1056",
+    "light": "#508DE2",
+    "dark": "#3A25C1"
+  },
+  "fonts": {
+    "family": "Poppins"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "background": {
+    "color": {
+      "light": "#FBFCFD",
+      "dark": "#090E1A"
+    }
+  },
+  "appearance": {
+    "default": "light",
+    "strict": true
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "pages": [
       {
-        "group": "Getting Started",
+        "group": "Getting started",
         "pages": [
           "index",
-          "quickstart"
+          "getting-started/create-account",
+          "getting-started/create-organization",
+          "getting-started/checklist",
+          "getting-started/connect-first-channel"
+        ]
+      },
+      {
+        "group": "Connecting your channels",
+        "pages": [
+          "integrations/how-integrations-work",
+          "integrations/google",
+          "integrations/meta",
+          "integrations/outlook",
+          "integrations/tripadvisor",
+          "integrations/uber-eats",
+          "integrations/deliveroo",
+          "integrations/just-eat",
+          "integrations/zenchef",
+          "integrations/manage"
+        ]
+      },
+      {
+        "group": "Home",
+        "pages": [
+          "home"
+        ]
+      },
+      {
+        "group": "Inbox",
+        "pages": [
+          "inbox/overview",
+          "inbox/filtering-and-searching",
+          "inbox/replying",
+          "inbox/assigning-and-comments",
+          "inbox/tags-sentiment-priority",
+          "inbox/folders",
+          "inbox/bulk-actions",
+          "inbox/exporting"
+        ]
+      },
+      {
+        "group": "Issues and tasks",
+        "pages": [
+          "issues-and-tasks/issues",
+          "issues-and-tasks/tasks"
+        ]
+      },
+      {
+        "group": "AI chat",
+        "pages": [
+          "ai-chat"
+        ]
+      },
+      {
+        "group": "Analytics",
+        "pages": [
+          "analytics/dashboard",
+          "analytics/ratings",
+          "analytics/opinions",
+          "analytics/impact-on-rating",
+          "analytics/benchmarks",
+          "analytics/competitors"
+        ]
+      },
+      {
+        "group": "Automation",
+        "pages": [
+          "automation/auto-reply",
+          "automation/agents",
+          "automation/templates"
+        ]
+      },
+      {
+        "group": "Collecting feedback",
+        "pages": [
+          "collecting-feedback/forms",
+          "collecting-feedback/qr-codes",
+          "collecting-feedback/submissions"
+        ]
+      },
+      {
+        "group": "Loyalty",
+        "pages": [
+          "loyalty/games",
+          "loyalty/offers",
+          "loyalty/vouchers"
+        ]
+      },
+      {
+        "group": "Organization settings",
+        "pages": [
+          "settings/general",
+          "settings/locations",
+          "settings/location-groups",
+          "settings/users",
+          "settings/tags",
+          "settings/flags",
+          "settings/security",
+          "settings/billing"
+        ]
+      },
+      {
+        "group": "Your profile",
+        "pages": [
+          "profile/profile",
+          "profile/notifications"
+        ]
+      },
+      {
+        "group": "Export API",
+        "pages": [
+          "api/api-keys",
+          "api/authentication",
+          "api/endpoints"
+        ]
+      },
+      {
+        "group": "FAQ and troubleshooting",
+        "pages": [
+          "faq/integration-disconnected",
+          "faq/license-inactive",
+          "faq/glossary",
+          "faq/contact-support"
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "href": "https://feedelity.io"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
+        "label": "Submit a ticket",
+        "href": "mailto:tickets@feedelity-au0lw6.p.tawk.email?subject=Support%20request"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Open app",
+      "href": "https://app.feedelity.io"
     }
   },
   "contextual": {
@@ -64,9 +189,8 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "linkedin": "https://www.linkedin.com/company/feedelity-ai",
+      "instagram": "https://www.instagram.com/feedelity.ai"
     }
   }
 }

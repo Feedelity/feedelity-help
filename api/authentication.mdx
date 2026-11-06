@@ -1,0 +1,72 @@
+---
+title: "Authentication and rate limits"
+description: "Authenticate requests and stay within the rate limits."
+---
+
+## Base URL
+
+All endpoints live under version 1 of the API:
+
+```text
+https://api.feedelity.io/v1
+```
+
+All endpoints are read-only `GET` requests that return JSON.
+
+## Authenticate
+
+Send your [API key](/api/api-keys) in the `Authorization` header of every request. Send the key as is, without a `Bearer` prefix.
+
+```bash
+curl https://api.feedelity.io/v1/tags \
+  -H "Authorization: YOUR_API_KEY"
+```
+
+The key decides which organization's data you get. You don't pass an organization ID.
+
+## Rate limits
+
+The API allows:
+
+- 100 requests per minute
+- 2,000 requests per hour
+
+{/* TODO: confirm the limits apply per client. The limiter keys on IP address, but uvicorn runs without --proxy-headers, so behind the load balancer all clients may share one limit. */}
+
+When you go over a limit, the API returns `429 Too Many Requests`:
+
+```json
+{
+  "error": "Rate limit exceeded: 100 per 1 minute"
+}
+```
+
+The response doesn't include a `Retry-After` header. Wait before you retry, and back off further if you keep hitting the limit.
+
+<Tip>
+  Use the `after` parameter on [`GET /v1/cases`](/api/endpoints#list-cases) to fetch only what changed since your last sync. This keeps you well within the limits.
+</Tip>
+
+## Errors
+
+Errors return a JSON body that explains what went wrong.
+
+| Status | Meaning |
+| --- | --- |
+| `401` | The API key is missing, invalid, or inactive. |
+| `422` | A query parameter has an invalid value, for example `limit=100`. |
+| `429` | You went over a rate limit. |
+
+The `401` errors return a `detail` message:
+
+| `detail` | What to do |
+| --- | --- |
+| `Missing API key. Provide it in the Authorization header.` | Add the `Authorization` header. |
+| `Invalid API key provided.` | Check that you copied the full key. |
+| `Inactive API key. Please contact support.` | The key was deactivated. [Contact support](/faq/contact-support) for a new one. |
+
+```json
+{
+  "detail": "Invalid API key provided."
+}
+```
