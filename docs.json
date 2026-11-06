@@ -86,16 +86,7 @@
           "contact-support"
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Website",
-          "href": "https://feedelity.io",
-          "icon": "globe"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -107,10 +98,6 @@
       {
         "label": "Submit a ticket",
         "href": "mailto:tickets@feedelity-au0lw6.p.tawk.email?subject=Support%20request"
-      },
-      {
-        "label": "Support",
-        "href": "mailto:info@feedelity.io"
       }
     ],
     "primary": {
