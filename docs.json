@@ -48,6 +48,10 @@
   "navbar": {
     "links": [
       {
+        "label": "Create a ticket",
+        "href": "https://feedelity.tawk.help/"
+      },
+      {
         "label": "Support",
         "href": "mailto:info@feedelity.io"
       }
