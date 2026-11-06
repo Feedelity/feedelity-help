@@ -1,26 +1,56 @@
 ---
 title: "Location groups"
-description: "Bundle locations into groups to filter your dashboards and inbox."
+description: "Bundle locations to compare them, filter your data, and manage access."
 ---
 
-Feedelity centralizes feedback from all your [locations](/settings/locations). As your business grows, analyzing performance across dozens or hundreds of locations gets complex.
+As your business grows, analyzing dozens or hundreds of [locations](/settings/locations) one by one gets complex. Location groups let you bundle locations based on what matters to your business, such as region, manager, or restaurant type.
 
-Location groups let you **bundle locations based on criteria that matter to your business**, such as geographic region, manager, or store type. A location can belong to multiple groups. For example, a store can belong to both a "North Region" group and a "Delivery Restaurants" group.
+A location can belong to several groups. For example, a restaurant can belong to both a "North Region" group and a "Delivery Restaurants" group.
 
-Use location groups to filter your dashboards and the inbox to the relevant part of your business.
+Use location groups to:
 
-![Location groups page in settings](/images/settings/location-groups/1.png)
+- Filter your dashboards and the inbox to part of your business
+- Give a user access to all locations in a group at once. See [Users](/settings/users#location-access).
 
-## Manage location groups
+Go to **Settings** > **Location groups**, in the **Organization** section, to manage them.
 
-To create a location group, click **Add group**. Enter a name and a description. You can update both at any time.
+{/* SCREENSHOT: /settings/location-groups — the list of location groups */}
+<Frame>
+  <img src="/images/settings/location-groups/list.png" alt="The Location groups page" width="832" />
+</Frame>
 
-Click a group to open a side panel, where you manage which locations belong to the group.
+## Create a location group
 
-To delete a group, click **Delete group**.
+<Steps>
+  <Step title="Start a new group">
+    Click **Add group**.
+  </Step>
+  <Step title="Name the group">
+    Enter a **Name** and, optionally, a **Description**.
+  </Step>
+  <Step title="Choose the locations">
+    Under **Locations**, select the locations that belong to the group.
+  </Step>
+  <Step title="Save">
+    Click **Save**.
+  </Step>
+</Steps>
+
+## Edit a location group
+
+Click a group to change its name, description, or locations. Click **Save** to apply your changes.
+
+You can also add a single location to a group from the location's own page. See [Locations](/settings/locations#add-the-location-to-a-group).
+
+{/* SCREENSHOT: /settings/location-groups/<id> — the group page with Name, Description, and the Locations list */}
+<Frame>
+  <img src="/images/settings/location-groups/detail.png" alt="A location group with its name, description, and locations" width="832" />
+</Frame>
+
+## Delete a location group
+
+Open the group, click **⋯**, and choose **Delete group**. Confirm with **Delete group**.
 
 <Note>
   Deleting a group doesn't delete the locations in it.
 </Note>
-
-![Side panel for managing the locations in a group](/images/settings/location-groups/2.png)

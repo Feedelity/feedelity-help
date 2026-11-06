@@ -3,25 +3,51 @@ title: "Tags"
 description: "Create and manage the tags that categorize your feedback and power your dashboards."
 ---
 
-Tags automatically categorize your incoming customer feedback. Create and manage a set of relevant tags to track the topics that matter most to your business.
+Tags categorize your incoming feedback by topic. Feedelity's AI detects your tags in each case, along with a sentiment. You see tagged feedback in your [inbox](/inbox/overview) and aggregated data in your dashboards.
 
-Feedelity automatically analyzes incoming feedback and labels it with the right tags and sentiment. You see categorized feedback in your [Inbox](/inbox/inbox) and aggregated data in your dashboards. For example, track mentions of "Hygiene" or "Staff Friendliness" to monitor performance in those areas.
+For example, track mentions of "Hygiene" or "Staff friendliness" to monitor how your locations perform in those areas.
 
-Tags are assigned automatically, but you can always adjust the tags or sentiment of any case manually from the **Inbox**.
+Tags are applied automatically, but you can always adjust the tags or sentiment of a case in the inbox. See [Tags, sentiment, and priority](/inbox/tags-sentiment-priority).
 
-![Tags with sentiment on a case in the inbox](/images/settings/tags/1.png)
+{/* SCREENSHOT: /inbox — an open case with its tags and sentiment */}
+<Frame>
+  <img src="/images/settings/tags/case-tags.png" alt="Tags with sentiment on a case in the inbox" width="325" />
+</Frame>
 
-![Editing the tags of a case](/images/settings/tags/2.png)
+<Frame>
+  <img src="/images/settings/tags/edit-tags.png" alt="Adding a tag to a case" width="592" />
+</Frame>
 
 ## Manage tags
 
-Admins manage tags under **Settings** > **Tags**.
+Go to **Settings** > **Tags**, in the **Analytics** section.
 
-![Tags page in settings](/images/settings/tags/3.png)
+<Note>
+  Only administrators can access **Settings**.
+</Note>
 
-You can create tags at different levels. For example, create a tag category called "Food & Beverage" and add tags under it, such as "Temperature" or "Portion Size".
+{/* SCREENSHOT: /settings/tags — the tag hierarchy with a category expanded and the hover actions visible */}
+<Frame>
+  <img src="/images/settings/tags/list.png" alt="The Tags page with a category expanded and the actions of a sub-tag" width="832" />
+</Frame>
 
-When you add a tag, you're asked for a description. The clearer and more detailed the description, the more accurately incoming guest feedback gets tagged.
+Tags form a hierarchy. For example, create a category called "Food & Beverage" and add sub-tags under it, such as "Temperature" or "Portion size".
 
-- To view the tags and sub-tags in a category, click the category.
-- To edit or delete a tag, hover over it and click the **Edit** (pencil) or **Delete** (trash can) icon.
+- To create a category, click **Add tag**.
+- To add a sub-tag, hover over a tag and click the **+** icon.
+- To view the sub-tags in a category, click the category.
+- To edit a tag, hover over it and click the pencil icon.
+
+### Write a good description
+
+Each tag has a **Name** and a **Description**. The name appears on cases, filters, and dashboards, so keep it short.
+
+Feedelity uses the description to decide which feedback gets the tag. Say what the tag covers and what it doesn't. For example, for "Delivery time": "Feedback about how long orders take to arrive, including late or early deliveries. Doesn't cover delivery costs or driver behaviour."
+
+### Delete a tag
+
+Open the tag with the pencil icon, click **Delete**, and confirm.
+
+<Warning>
+  Deleting a tag also deletes its sub-tags and removes them from your past feedback. This can't be undone.
+</Warning>

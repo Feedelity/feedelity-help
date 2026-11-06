@@ -1,65 +1,52 @@
 ---
 title: "Security"
-description: "Verify your email domains and control how users with those domains sign in."
+description: "Verify your email domains and control how users with those domains sign in and join."
 ---
 
-On the **Security** page, you manage your organization's verified email domains. Once you verify a domain, such as `feedelity.io`, you control how users with matching email addresses sign in to Feedelity. Go to **Settings** > **Security** to open it.
+On the **Security** page, you register your company's email domains. Once you verify a domain, such as `yourcompany.com`, you control how people with that email domain sign in and join your organization. Go to **Settings** > **Security**, in the **Organization** section, to open it.
 
 <Note>
-  Only admins can see this page.
+  Only administrators can access **Settings**.
 </Note>
 
-![Security page with verified domains](/images/settings/security/1.png)
+{/* SCREENSHOT: /settings/security — the Domains table with Domain, Email Auth, Microsoft SSO, and Access Policy columns */}
+<Frame>
+  <img src="/images/settings/security/domains.png" alt="The Domains table on the Security page" width="832" />
+</Frame>
+
+## Register a domain
+
+<Steps>
+  <Step title="Start the wizard">
+    Click **Register domain**, then **Get started**.
+  </Step>
+  <Step title="Enter the domain">
+    Enter the domain name, for example `yourcompany.com`. Click **Check Availability**.
+  </Step>
+  <Step title="Choose an email address">
+    Under **Email Prefix**, enter the part before the `@`, for example `info`. Click **Send Verification Code**.
+  </Step>
+  <Step title="Verify the domain">
+    Enter the 6-digit code you received by email and click **Verify Domain**. Then click **Finish**.
+  </Step>
+</Steps>
 
 ## Domain settings
 
-Each domain has:
+Click a domain to open its settings. Changes save automatically.
 
-- A domain name
-- Allowed authentication methods:
-  - **Email & Password**: users log in with their email and password.
-  - **Microsoft SSO**: users log in with their Microsoft account.
-- An **Access Policy**, which lets users join without admin approval
+Under **Authentication Methods**, choose how users with this email domain sign in:
 
-![Domain settings with authentication methods and access policy](/images/settings/security/2.png)
+- **Email & Password**: sign in with an email address and password.
+- **Microsoft SSO**: sign in with a Microsoft account.
 
-## Manage domains
+Under **Access Policy**, turn on **Automatic Access** to let people with this email domain join your organization without admin approval. When it's off, they send a join request that an admin approves or rejects under [Users](/settings/users#join-requests).
 
-### Add a domain
+{/* SCREENSHOT: /settings/security — the domain side panel with Authentication Methods and Access Policy */}
+<Frame>
+  <img src="/images/settings/security/domain.png" alt="Domain settings with authentication methods and access policy" width="383" />
+</Frame>
 
-<Steps>
-  <Step title="Register the domain">
-    Click **Register domain**.
-  </Step>
-  <Step title="Enter the domain name">
-    Enter the domain name, for example `company.com`.
-  </Step>
-  <Step title="Enter an email address">
-    Enter a valid email address from that domain.
-  </Step>
-  <Step title="Verify the domain">
-    Enter the verification code you receive by email.
-  </Step>
-</Steps>
+## Remove a domain
 
-### Update domain settings
-
-<Steps>
-  <Step title="Open the domain">
-    Click the domain you want to edit.
-  </Step>
-  <Step title="Update authentication methods">
-    Update the allowed authentication methods. Changes save automatically.
-  </Step>
-</Steps>
-
-### Delete a domain
-
-<Steps>
-  <Step title="Remove the domain">
-    Click **Remove domain**.
-  </Step>
-  <Step title="Confirm">
-    Confirm in the pop-up to complete the deletion.
-  </Step>
-</Steps>
+Click the domain and click **Remove domain**. The domain is removed right away, without a confirmation step.

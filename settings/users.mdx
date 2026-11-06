@@ -3,56 +3,92 @@ title: "Users"
 description: "Invite users, manage roles and location access, and configure notifications."
 ---
 
-On the **Users** page, you add and remove users, manage roles, and configure notifications. This controls access and responsibilities within Feedelity. Go to **Settings** > **Users** to open it.
+On the **Users** page, you invite your team and decide who can see and do what. Go to **Settings** > **Users**, in the **Organization** section, to open it.
 
 <Note>
-  Only admins can see this page.
+  Only administrators can access **Settings**.
 </Note>
 
-![Users page in settings](/images/settings/users/1.png)
+{/* SCREENSHOT: /settings/users — Organization members list with Name, Role, and Locations columns */}
+<Frame>
+  <img src="/images/settings/users/list.png" alt="The Users page with the organization members" width="832" />
+</Frame>
 
 ## User roles
 
-Feedelity has three user roles:
+Feedelity has three roles:
 
-- **Admin**: Full access to all features and settings. Admins also manage user roles.
-- **Member**: Can manage the inbox and bulk send, and view all dashboard pages. Members don't have access to **Settings**.
-- **Viewer**: Has the same access as a member but can't perform actions, such as replying to or deleting a review. The only action a viewer can perform is tagging another user in the comment box of a case.
+- **Administrator**: full access to all locations and settings. Can also invite users and send vouchers.
+- **Member**: can view, edit, and reply to feedback for their assigned locations.
+- **Viewer**: read-only access to feedback and reports for their assigned locations. Viewers can still add comments to a case.
 
-For members and viewers, admins can restrict access to specific locations. Users with assigned locations only see data from those locations in the inbox, bulk send, and dashboard.
-
-| | Admin | Member | Viewer |
+| | Administrator | Member | Viewer |
 | --- | --- | --- | --- |
-| View settings | ✅ | ❌ | ❌ |
-| Modify settings: integrations, QR codes, AI reply agents, response templates, tags and flags, users, locations, location groups, billing, security | ✅ | ❌ | ❌ |
-| View inbox | ✅ | ✅ For selected locations | ✅ For selected locations |
-| Perform actions in inbox and bulk send | ✅ | ✅ For selected locations | ❌ Can only add case notes |
-| View dashboard | ✅ | ✅ For selected locations | ✅ For selected locations |
-| View locations page | ✅ | ✅ For all locations | ✅ For all locations |
-| View ratings page | ✅ | ✅ For all locations | ✅ For all locations |
-| Send credit vouchers | ✅ | ❌ Custom setting | ❌ |
+| Open **Settings** and change any setting | ✅ | ❌ | ❌ |
+| View the inbox and dashboards | ✅ All locations | ✅ Assigned locations | ✅ Assigned locations |
+| Reply to, close, and tag cases | ✅ | ✅ Assigned locations | ❌ |
+| Use bulk send | ✅ | ✅ Assigned locations | ❌ |
+| Add comments to a case | ✅ | ✅ | ✅ |
+| View benchmarks and ratings for all locations | ✅ | Only if **Show all locations in Benchmarks** is on | Only if **Show all locations in Benchmarks** is on |
+| Send delivery platform credit with a reply | ✅ | Only with the **Send vouchers** permission | ❌ |
+
+Bulk send and delivery platform credit are included in the trial and the Standard plan. On the Enterprise plan, they're add-ons. See [Billing and license](/settings/billing#features-per-plan).
 
 ## Invite users
 
-To invite a user to your organization, click **Add user**. In the pop-up, enter the email address and permissions of the user you want to invite.
+<Steps>
+  <Step title="Open the invite dialog">
+    Click **Add user**.
+  </Step>
+  <Step title="Enter the email address and role">
+    Enter the **Email address** and choose a role under **Permissions**. To invite several people at once, click **Invite another user**.
+  </Step>
+  <Step title="Choose location access">
+    For members and viewers, choose which locations or location groups they can access. If you don't choose any, they get access to all locations.
+  </Step>
+  <Step title="Send the invitation">
+    Optionally, add a message. Click **Send Invitation**.
+  </Step>
+</Steps>
 
-If you assign the member or viewer role, a second dropdown appears. Use it to grant access to specific locations. By default, all locations are selected.
+{/* SCREENSHOT: /settings/users — the "Invite team members to Feedelity" dialog with email, role, and locations */}
+<Frame>
+  <img src="/images/settings/users/invite.png" alt="The invite dialog with email address, role, and location access" width="872" />
+</Frame>
 
-![Invite dialog with email, role, and location access](/images/settings/users/2.png)
+The invited user receives an email with instructions to join your organization. Open invitations appear under **Pending invitations**.
 
-The invited user receives an email with instructions to join the organization.
+### Join requests
 
-If someone creates a Feedelity account with one of your verified domains, they can request to join your organization. You manage verified domains under [Security](/settings/security). Admins see sent invitations and pending requests on the **Users** page.
+If someone signs up with an email address from one of your [verified domains](/settings/security), they can request to join your organization. Their request appears under **Pending requests**.
 
-![Pending invitations and requests on the users page](/images/settings/users/3.png)
+- Click **Approve**, choose a **Role** and **Location access**, and click **Approve request**.
+- Click **Reject** and confirm with **Reject request**. The person gets an email that the request was rejected.
 
-## User settings
+{/* SCREENSHOT: /settings/users — Pending invitations and Pending requests sections */}
 
-Click a user in your organization to update their role, location access, and other permissions. You can also:
+## Manage a user
 
-- Set their notifications. Every user can set their own notification preferences by clicking their account name in the bottom-left corner.
-- Remove the user from your organization.
+Click a user to open their settings. Changes save automatically.
 
-Changes save automatically.
+- **Role**: change what the user can do. You can't change your own role.
+- **Locations**: for members and viewers, choose **All locations** or **Specific locations**. With specific locations, you can select individual locations and location groups.
+- **Permissions**: for members and viewers, grant extra abilities beyond their role. Turn on **Send vouchers** to let the user add delivery platform credit to replies. See [Add credit to a reply](/inbox/replying#add-credit-to-a-reply).
+- **Email Notifications**: choose which emails the user receives: **Red flag alerts**, **Weekly report**, and **Daily report**.
 
-![User detail panel with role, locations, and notifications](/images/settings/users/4.png)
+Users can also change their own email notifications in their [profile](/profile/notifications).
+
+To remove a user from your organization, click **Remove user** and confirm. This can't be undone.
+
+{/* SCREENSHOT: /settings/users/<id> — user page with Role, Locations, Permissions, and Email Notifications */}
+<Frame>
+  <img src="/images/settings/users/detail.png" alt="A user page with role, locations, permissions, and email notifications" width="832" />
+</Frame>
+
+### Location access
+
+When you give a user access to a location group, they get access to every location in that group. If you add a location to the group later, the user gets access to it too.
+
+## Advanced settings
+
+At the bottom of the **Users** page, **Show all locations in Benchmarks** lets every user view benchmark statistics for all locations on the **Locations** and **Ratings** pages. When it's off, users only see benchmark data for their assigned locations.

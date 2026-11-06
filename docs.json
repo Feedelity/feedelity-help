@@ -19,71 +19,140 @@
       "dark": "#090E1A"
     }
   },
+  "appearance": {
+    "default": "light",
+    "strict": true
+  },
   "favicon": "/favicon.svg",
   "navigation": {
     "pages": [
       {
-        "group": "Getting Started",
+        "group": "Getting started",
         "pages": [
           "index",
-          "quickstart",
-          "getting-started/product-tour"
+          "getting-started/create-account",
+          "getting-started/create-organization",
+          "getting-started/checklist",
+          "getting-started/connect-first-channel"
+        ]
+      },
+      {
+        "group": "Connecting your channels",
+        "pages": [
+          "integrations/how-integrations-work",
+          "integrations/google",
+          "integrations/meta",
+          "integrations/outlook",
+          "integrations/tripadvisor",
+          "integrations/uber-eats",
+          "integrations/deliveroo",
+          "integrations/just-eat",
+          "integrations/zenchef",
+          "integrations/manage"
+        ]
+      },
+      {
+        "group": "Home",
+        "pages": [
+          "home"
         ]
       },
       {
         "group": "Inbox",
         "pages": [
-          "inbox/inbox",
-          "inbox/bulk-send"
+          "inbox/overview",
+          "inbox/filtering-and-searching",
+          "inbox/replying",
+          "inbox/assigning-and-comments",
+          "inbox/tags-sentiment-priority",
+          "inbox/folders",
+          "inbox/bulk-actions",
+          "inbox/exporting"
         ]
       },
       {
-        "group": "Reporting",
+        "group": "Issues and tasks",
         "pages": [
-          "reporting/dashboard",
-          "reporting/locations",
-          "reporting/ratings"
+          "issues-and-tasks/issues",
+          "issues-and-tasks/tasks"
+        ]
+      },
+      {
+        "group": "AI chat",
+        "pages": [
+          "ai-chat"
+        ]
+      },
+      {
+        "group": "Analytics",
+        "pages": [
+          "analytics/dashboard",
+          "analytics/ratings",
+          "analytics/opinions",
+          "analytics/impact-on-rating",
+          "analytics/benchmarks",
+          "analytics/competitors"
+        ]
+      },
+      {
+        "group": "Automation",
+        "pages": [
+          "automation/auto-reply",
+          "automation/agents",
+          "automation/templates"
         ]
       },
       {
         "group": "Collecting feedback",
         "pages": [
-          "collecting-feedback/five-star-reviews",
-          "collecting-feedback/reservation-system",
-          "collecting-feedback/wheel-of-fortune"
+          "collecting-feedback/forms",
+          "collecting-feedback/qr-codes",
+          "collecting-feedback/submissions"
         ]
       },
       {
-        "group": "Integrations",
+        "group": "Loyalty",
         "pages": [
-          "integrations/overview",
-          "integrations/google",
-          "integrations/tripadvisor",
-          "integrations/meta",
-          "integrations/uber-eats",
-          "integrations/deliveroo",
-          "integrations/just-eat-takeaway",
-          "integrations/outlook",
-          "integrations/zenchef"
+          "loyalty/games",
+          "loyalty/offers",
+          "loyalty/vouchers"
         ]
       },
       {
-        "group": "Settings",
+        "group": "Organization settings",
         "pages": [
+          "settings/general",
           "settings/locations",
           "settings/location-groups",
           "settings/users",
-          "settings/security",
           "settings/tags",
-          "settings/red-flags",
-          "settings/response-agents",
-          "settings/response-templates"
+          "settings/flags",
+          "settings/security",
+          "settings/billing"
         ]
       },
       {
-        "group": "Support",
+        "group": "Your profile",
         "pages": [
-          "contact-support"
+          "profile/profile",
+          "profile/notifications"
+        ]
+      },
+      {
+        "group": "Export API",
+        "pages": [
+          "api/api-keys",
+          "api/authentication",
+          "api/endpoints"
+        ]
+      },
+      {
+        "group": "FAQ and troubleshooting",
+        "pages": [
+          "faq/integration-disconnected",
+          "faq/license-inactive",
+          "faq/glossary",
+          "faq/contact-support"
         ]
       }
     ]

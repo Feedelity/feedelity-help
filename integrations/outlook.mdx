@@ -3,7 +3,7 @@ title: "Outlook"
 description: "Connect Microsoft 365 shared mailboxes to Feedelity and restrict access to only those mailboxes."
 ---
 
-Feedelity connects to your Microsoft 365 tenant to read incoming feedback from designated shared mailboxes (for example, info@yourbrand.be). Your team can then reply to that feedback directly from Feedelity.
+Feedelity connects to your Microsoft 365 tenant to read incoming feedback from designated shared mailboxes (for example, info@yourbrand.be). Each mailbox becomes a channel. Your team can then reply to that feedback by email, directly from Feedelity.
 
 <Warning>
   A **Microsoft 365 administrator must start this integration**. This person needs rights to grant tenant-wide admin consent and to run Exchange Online PowerShell. A regular user account can't complete this setup.
@@ -32,8 +32,10 @@ Shared mailboxes have no signed-in user, so Microsoft doesn't support standard d
 
     1. Log in to Feedelity as an administrator.
     2. Go to **Settings** > **Integrations** and click **Add integration**.
-    3. Select **Microsoft Outlook**.
+    3. Select **Outlook**.
     4. Grant consent: Microsoft opens. Click **Accept** to grant the required permissions.
+
+    Feedelity then opens **Add a mailbox**. Don't add a mailbox yet: first restrict access in the next step. To come back later, click **Integrations** at the top to return to the list.
 
     <Note>
       At this moment, access is technically **tenant-wide**. You restrict it **immediately** in the next step.
@@ -100,15 +102,21 @@ Shared mailboxes have no signed-in user, so Microsoft doesn't support standard d
   <Step title="Finalize the configuration">
     Now that the connection is secure, tell Feedelity which mailbox to sync.
 
-    1. Go to **Settings** > **Integrations** > **Outlook Integration** and click the tenant you just connected.
-    2. Click **Add channels** at the bottom of the page.
-    3. Type the email address of the shared mailbox, for example info@yourbrand.be, and confirm.
+    1. Go to **Settings** > **Integrations** and click the Outlook account you just connected.
+    2. Click **Add channel**.
+    3. On **Add a mailbox**, type the email address of the shared mailbox in **Email**, for example info@yourbrand.be.
+    4. Click **Continue**.
 
     <Warning>
       Make sure this mailbox is a member of the security group you created in step 1.
     </Warning>
 
-    ![Adding a shared mailbox as a channel in Feedelity](/images/integrations/outlook/2.png)
+    {/* SCREENSHOT: /integrations/accounts/{id}/channels/new — the "Add a mailbox" page for Outlook with an email address filled in */}
+    <Frame>
+      <img src="/images/integrations/outlook/add-mailbox.png" alt="Add a mailbox page with an email address in the Email field" width="496" />
+    </Frame>
+
+    Mailboxes aren't linked to a location automatically. To link one, see [Link a channel to a location](/integrations/how-integrations-work#link-a-channel-to-a-location).
   </Step>
 </Steps>
 

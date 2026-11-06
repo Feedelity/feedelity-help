@@ -1,0 +1,58 @@
+---
+title: "Integration disconnected or no new reviews"
+description: "What to do when feedback stops arriving."
+---
+
+If new reviews or messages stop showing up in your inbox, check these causes in order.
+
+## The integration needs to be reconnected
+
+Sometimes a platform ends Feedelity's access to your account. Until you reconnect, new feedback stops arriving and replies may fail.
+
+Administrators see a warning at the top of the **Inbox**: **Your *platform* account *name* needs your attention**.
+
+{/* SCREENSHOT: /inbox — the reconnect warning above the case list with the Reconnect now button */}
+
+To fix it:
+
+1. Click **Reconnect now** in the warning.
+2. Log in to the platform with the account that manages your locations, and allow access.
+
+You can also reconnect from **Settings** > **Integrations**. Accounts that need it show **Reauthentication required** in the **Status** column. Click **Reconnect**.
+
+{/* SCREENSHOT: /settings/integrations — an account with the Reauthentication required status and the Reconnect button */}
+
+<Note>
+  Only administrators see this warning. If you're a member or viewer, ask an administrator to reconnect.
+</Note>
+
+## Facebook and Instagram are temporarily unavailable
+
+If you see the warning **Facebook and Instagram are temporarily unavailable**, the problem is on our side. New Facebook and Instagram messages don't come in for now, and you can't reply to them. You don't need to do anything: we're working on a fix. Click **Dismiss** to hide the warning.
+
+## The location is closed or removed on the platform
+
+Open **Settings** > **Integrations** and click the account. Check the status of each channel under **Channels**:
+
+- **Inactive**: the location is temporarily or permanently closed on the platform. Feedelity can't fetch new data while it stays closed.
+- **Deleted**: the channel was deleted from your account on the platform. Feedelity can't fetch new data for it.
+
+To fix it, reopen the location on the platform, or add the channel again if it moved to a new listing. See [Manage and reconnect integrations](/integrations/manage).
+
+## The feedback arrives but you can't find it
+
+Feedback may be arriving without showing where you expect it:
+
+- **The channel isn't linked to a location.** Its feedback isn't assigned to a location, so it disappears when you filter by location. In **Settings** > **Integrations**, open the account and link each channel to a location under **Channels**.
+- **Inbox automation moves it to Closed.** Each integration can send new messages straight to the **Closed** folder. Check **Inbox automation** on the integration, and look under **Closed** or **All** in the inbox.
+- **A filter is on.** Clear your inbox filters. See [Filter and search](/inbox/filtering-and-searching).
+
+## There are simply no new reviews
+
+Feedelity fetches feedback from each platform on a schedule, so new reviews can take a while to appear. If a quiet location stays empty, check the platform itself for new reviews.
+
+{/* TODO: confirm the sync interval per platform so we can tell customers how long to wait */}
+
+## Still stuck?
+
+[Contact support](/faq/contact-support). Tell us which integration and location are affected.

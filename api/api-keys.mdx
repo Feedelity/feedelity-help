@@ -1,0 +1,35 @@
+---
+title: "API keys"
+description: "Create and manage keys for the Data Export API."
+---
+
+The Data Export API lets you pull your feedback data into your own data warehouse, BI tool, or reporting pipeline. Every request needs an API key.
+
+API access is part of the Enterprise plan.
+
+## Get an API key
+
+You can't create API keys in the app. Feedelity creates them for you.
+
+To request a key, [contact support](/faq/contact-support). Tell us which organization the key is for.
+
+Each key belongs to one organization. It gives read access to all of that organization's cases, locations, and tags.
+
+## Keep your key safe
+
+We show your key only once, when we send it to you. Feedelity stores only a hashed version, so we can't look it up later.
+
+- Store the key in a secrets manager or environment variable.
+- Don't commit it to source control or share it in email threads.
+- Call the API from your server, never from a browser or mobile app.
+
+## Revoke a key
+
+If a key leaks or you no longer need it, [contact support](/faq/contact-support) to deactivate it. Requests with a deactivated key get a `401` error. If you need a new key, we create one for you.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Authentication and rate limits" icon="key" href="/api/authentication">Send your key and stay within the limits.</Card>
+  <Card title="Endpoints" icon="code" href="/api/endpoints">Export cases, locations, and tags.</Card>
+</CardGroup>
