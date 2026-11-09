@@ -40,15 +40,16 @@
         "group": "Connecting your channels",
         "pages": [
           "integrations/how-integrations-work",
+          "integrations/manage",
           "integrations/google",
-          "integrations/meta",
+          "integrations/facebook",
+          "integrations/instagram",
           "integrations/outlook",
           "integrations/tripadvisor",
           "integrations/uber-eats",
           "integrations/deliveroo",
           "integrations/just-eat",
-          "integrations/zenchef",
-          "integrations/manage"
+          "integrations/zenchef"
         ]
       },
       {
@@ -192,5 +193,11 @@
       "linkedin": "https://www.linkedin.com/company/feedelity-ai",
       "instagram": "https://www.instagram.com/feedelity.ai"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/integrations/meta",
+      "destination": "/integrations/facebook"
+    }
+  ]
 }
