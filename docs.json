@@ -63,9 +63,16 @@
         "pages": [
           "inbox/overview",
           "inbox/filtering-and-searching",
-          "inbox/replying",
+          {
+            "group": "Reply to customers",
+            "root": "inbox/replying",
+            "pages": [
+              "inbox/credit"
+            ]
+          },
           "inbox/assigning-and-comments",
           "inbox/tags-sentiment-priority",
+          "inbox/order-details",
           "inbox/folders",
           "inbox/bulk-actions",
           "inbox/exporting"
