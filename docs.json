@@ -30,7 +30,9 @@
         "group": "Getting started",
         "pages": [
           "index",
+          "getting-started/users-and-organizations",
           "getting-started/create-account",
+          "getting-started/log-in",
           "getting-started/create-organization",
           "getting-started/checklist",
           "getting-started/connect-first-channel"
