@@ -1,0 +1,98 @@
+---
+title: "How users and organizations work"
+description: "Understand accounts, organizations, roles, and location access, and how you join, switch, and leave organizations."
+---
+
+In Feedelity, your account belongs to you and your organization belongs to your company. One account can belong to several organizations, with a different role in each.
+
+## Accounts, organizations, and roles
+
+- **Account**: you, identified by your email address. You use the same account and password for every organization. See [Log in](/getting-started/log-in).
+- **Organization**: your company's space in Feedelity, usually one restaurant brand. It holds the locations, channels, feedback, users, and settings. Billing is per organization.
+- **Role**: what you can do in one organization. You have exactly one role in each organization you belong to.
+- **Location access**: which locations you see in that organization. Your access can be all locations or only some.
+
+For example, you can be an **Administrator** in your own brand's organization and a **Viewer** in a franchise partner's organization. Each organization only sees its own data.
+
+## Roles
+
+| Role | What you can do |
+| --- | --- |
+| **Administrator** | Full access to all locations and settings. Can invite users, manage integrations and billing, and send credit and vouchers. |
+| **Member** | View, edit, and reply to feedback for assigned locations. |
+| **Viewer** | Read-only access to feedback and reports for assigned locations. Can still add comments to a case. |
+
+See [Users](/settings/users#user-roles) for the full comparison.
+
+## Location access
+
+Administrators always see all locations. For members and viewers, an administrator chooses **All locations** or **Specific locations**. With specific locations, you see the locations and [location groups](/settings/location-groups) you're assigned to, and the inbox, dashboards, and notifications only show feedback from those locations.
+
+See [Location access](/settings/users#location-access).
+
+## Join an organization
+
+There are three ways to get into an organization.
+
+<CardGroup cols={3}>
+  <Card title="Create one" icon="building-2" href="/getting-started/create-organization">
+    Set up a new organization for your business. You become its administrator.
+  </Card>
+  <Card title="Accept an invitation" icon="mail" href="#accept-an-invitation">
+    An administrator invites you by email.
+  </Card>
+  <Card title="Request access" icon="hand" href="#request-access">
+    Ask to join an organization that uses your company's email domain.
+  </Card>
+</CardGroup>
+
+### Accept an invitation
+
+An administrator [invites you](/settings/users#invite-users) from **Settings** > **Users** and chooses your role and locations. You get an email with a **Join** button.
+
+1. Click the button in the email. If you don't have an account yet, [create one](/getting-started/create-account) with the email address the invitation was sent to.
+2. Log in. Feedelity shows the invitation.
+3. Click **Accept**, or **Reject** to decline.
+
+Already in another organization? Your invitations also appear in the sidebar. Click your organization name at the top of the sidebar and find the invitation under **Pending Invitations**. Click ✓ to accept or ✕ to reject.
+
+### Request access
+
+When an organization has registered your company's email domain, for example `yourcompany.com`, Feedelity shows it to you after you sign up with an address on that domain.
+
+1. Optionally, add a message to the administrator.
+2. Click **Request access**.
+
+An administrator of that organization approves or rejects your request and chooses your role and locations. We email you once they decide. See [Join requests](/settings/users#join-requests).
+
+<Note>
+  An organization's email domain is registered automatically when someone creates the organization with a company email address. Personal addresses, such as Gmail or Outlook.com, are never registered.
+</Note>
+
+## What happens when you log in
+
+After you log in, Feedelity checks, in this order:
+
+1. **You belong to an organization**: Feedelity opens it. If you belong to several, it opens the first one alphabetically.
+2. **You have an invitation**: Feedelity asks you to accept or reject it.
+3. **You requested access**: Feedelity shows that your request is waiting for approval.
+4. **Your email domain is registered**: Feedelity offers to request access.
+5. **None of these**: Feedelity asks you to [create an organization](/getting-started/create-organization).
+
+## Switch organization
+
+1. Click your organization name at the top of the sidebar.
+2. Click **Switch organization**.
+3. Pick an organization. The checkmark shows the one you're in.
+
+**Switch organization** only appears when you belong to two or more organizations. With more than eight, you can search the list.
+
+## Create another organization
+
+To set up an organization for another business, go to [app.feedelity.io/organizations/new](https://app.feedelity.io/organizations/new) while you're logged in. You follow the same steps as in [Create your organization](/getting-started/create-organization) and become the new organization's administrator. Each organization has its own trial and license.
+
+## Leave an organization
+
+You can leave an organization from your profile. You lose access to all of that organization's data, and an administrator has to invite you again to get back in. See [Leave an organization](/profile/profile#leave-an-organization).
+
+To remove someone else, an administrator uses [Remove user](/settings/users#manage-a-user).
