@@ -124,7 +124,13 @@
         "group": "Loyalty",
         "pages": [
           "loyalty/games",
-          "loyalty/offers",
+          {
+            "group": "Offers",
+            "pages": [
+              "loyalty/offers",
+              "loyalty/leat"
+            ]
+          },
           "loyalty/vouchers"
         ]
       },
