@@ -15,6 +15,38 @@ Connect your Leat account first. You need a personal access token from your Leat
 
 When you connect, Feedelity imports all your Leat promotions right away. After that, Feedelity checks Leat for new and changed promotions every 15 minutes.
 
+## Create a promotion in Leat
+
+Every prize from Leat starts as a promotion in your Leat dashboard. A promotion sets the rules for its vouchers, such as when they're valid and how often they can be used.
+
+<Steps>
+  <Step title="Open promotions in Leat">
+    In your Leat dashboard, go to **Loyalty** > **Promotions & Vouchers**.
+  </Step>
+  <Step title="Create the promotion">
+    Click **New promotion**. Enter a name and a description and, if needed, how many times each voucher code can be used. Click **Create**.
+  </Step>
+  <Step title="Set the validity">
+    On the **Validity** tab, choose when vouchers become active and when they expire.
+  </Step>
+  <Step title="Set the limitations">
+    On the **Limitations** tab, choose how many voucher codes the promotion allows in total, and how many each contact can redeem.
+  </Step>
+  <Step title="Use it in Feedelity">
+    Within 15 minutes, the promotion appears under **Settings** > **Offers**. Add it as a prize to a [game](/loyalty/games).
+  </Step>
+</Steps>
+
+Keep these points in mind:
+
+- **Write the name and description for guests.** Feedelity uses them as the name and description of the offer, and guests see them in their voucher email. Include the conditions, such as a minimum spend and how long the voucher is valid. Feedelity doesn't show the expiry date that Leat sets.
+- **Don't generate vouchers in Leat.** Feedelity asks Leat for a new voucher each time a guest wins, so you don't need **Add vouchers** in the promotion.
+- **Leave room in the limitations.** When a promotion reaches its total number of voucher codes, or a guest reaches the number of codes per contact, Leat refuses the voucher and the guest who won doesn't get one. Guests can play a game again every 24 hours with the same email address.
+
+For more about promotions in Leat, see the Leat article [How to create a voucher](https://support.leat.com/en/articles/9375160-how-to-create-a-voucher).
+
+{/* TODO: confirm the Leat menu labels in a live dashboard, and what a guest sees in the game when Leat refuses a voucher */}
+
 ## Your promotions in Feedelity
 
 Your Leat promotions are listed under **Settings** > **Offers**, with the Leat icon and **Leat promotion** under the name. They show the same **Active** or **Inactive** status as in Leat.
