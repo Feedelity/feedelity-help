@@ -127,8 +127,9 @@
           "loyalty/games",
           {
             "group": "Offers",
+            "root": "loyalty/offers",
             "pages": [
-              "loyalty/offers",
+              "loyalty/feedelity-offers",
               "loyalty/leat"
             ]
           },
