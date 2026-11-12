@@ -1,0 +1,96 @@
+---
+title: "Leat promotions"
+description: "Use your Leat promotions as prizes in your games, with real Leat vouchers for your guests."
+---
+
+If you run your loyalty program in Leat, you can connect it to Feedelity. Your Leat promotions then appear as offers in Feedelity. Use them as prizes in your [games](/loyalty/games). Guests who win get a real Leat voucher.
+
+<Note>
+  Leat is available on request. Contact your account manager to turn it on for your organization.
+</Note>
+
+## Connect Leat
+
+Feedelity connects to Leat with a personal access token. You create it in your Leat dashboard, in a private app for Feedelity.
+
+### Create a personal access token in Leat
+
+<Steps>
+  <Step title="Open the integrations in Leat">
+    Sign in to your [Leat dashboard](https://business.leat.com) and go to **Apps** > **Integrations**. The **Marketplace** page opens.
+  </Step>
+  <Step title="Create a private app">
+    Click **Create private app** at the top right. Enter a **Name** you'll recognize, such as "Feedelity", and click **Create**.
+  </Step>
+  <Step title="Open the Auth tab">
+    In the menu on the left, click the app under **Installed** and open the **Auth** tab. A new app shows "There are no active personal access tokens for this private app".
+  </Step>
+  <Step title="Create the token">
+    Click **Create personal access token**. Leat lets you choose when the token expires. Pick a date far enough ahead, or no expiry at all.
+  </Step>
+  <Step title="Copy the token">
+    Copy the token right away and keep it somewhere safe until you paste it into Feedelity. Leat shows the full token only once.
+  </Step>
+</Steps>
+
+Once the token is created, the **Auth** tab lists it with its expiry, for example **Never expires**. Click **Rotate** to replace the token with a new one.
+
+<Warning>
+  Feedelity loses access to your Leat account when the token expires or when you rotate it. Your promotions then stop updating, and Feedelity can no longer create Leat vouchers for guests who win in your games. Only rotate the token when you're ready to connect the new token in Feedelity.
+</Warning>
+
+{/* TODO: document how to replace a rotated or expired Leat token in Feedelity once reconnecting a Leat account is possible. Confirm the expiry options in the Create personal access token dialog and what the Rotate menu offers */}
+
+### Connect the token in Feedelity
+
+<Steps>
+  <Step title="Start connecting in Feedelity">
+    Go to **Settings** > **Offers** and click **Connect loyalty platform**. You can also go to **Settings** > **Integrations** and click **Add integration**.
+  </Step>
+  <Step title="Choose Leat">
+    Choose **Leat**. The **Connect with Leat** screen opens.
+  </Step>
+  <Step title="Paste the token">
+    Paste the token into **Personal access token** and click **Continue**.
+  </Step>
+</Steps>
+
+Feedelity imports all your Leat promotions right away. After that, Feedelity checks Leat for new and changed promotions every 15 minutes.
+
+## Your promotions in Feedelity
+
+Your Leat promotions are listed under **Settings** > **Offers**, with the Leat icon and **Leat promotion** under the name. They show the same **Active** or **Inactive** status as in Leat.
+
+Leat is where you manage these promotions. The offer page shows: "This offer is managed in Leat. Any changes you make to this offer in Leat show up in Feedelity automatically."
+
+- **Name, description, and status**: change them in your Leat dashboard. Feedelity has no **Edit offer**, **Deactivate offer**, or **Delete offer** option for Leat promotions.
+- **Codes**: Leat creates the codes, so the offer page has no **Voucher codes** section.
+- **Voucher email**: you can customize the email in Feedelity, the same way as for Feedelity offers. See [Customize the voucher email](/loyalty/offers#customize-the-voucher-email).
+
+When a promotion is inactive in Leat, the offer page warns you that customers can no longer receive vouchers for this offer. Activate the promotion in your Leat dashboard to make vouchers available again. Inactive promotions can't be added as a prize, and games skip them.
+
+## How guests get a Leat voucher
+
+When a guest wins a Leat promotion in one of your games:
+
+<Steps>
+  <Step title="The guest is added to Leat">
+    Feedelity looks up the guest in Leat by email address. If the guest isn't a contact in Leat yet, Feedelity adds them.
+  </Step>
+  <Step title="Leat creates the voucher">
+    Leat creates a voucher for the promotion, with its own code.
+  </Step>
+  <Step title="Feedelity sends the voucher">
+    The guest receives the voucher email from Feedelity, with the Leat code.
+  </Step>
+</Steps>
+
+The voucher is listed under **Settings** > **Vouchers**, like every other voucher, and in your Leat dashboard.
+
+{/* TODO: confirm with Leat whether Leat also emails the guest when a voucher is created */}
+
+## Your Leat account in Feedelity
+
+Go to **Settings** > **Integrations** and click your Leat account. The **Offers** section lists all promotions from this account. Click **View all offers** to open the offers list.
+
+To disconnect Leat, delete the integration. See [Delete an integration](/integrations/manage#delete-an-integration).

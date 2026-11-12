@@ -43,7 +43,7 @@ A guest can play the same game once every 24 hours with the same email address.
 
 ## Before you start
 
-- Create at least one [offer](/loyalty/offers). Offers are the prizes on your wheel.
+- Create at least one [offer](/loyalty/offers), or connect [Leat](/loyalty/leat) to use your Leat promotions. Offers are the prizes on your wheel.
 - Connect [Google](/integrations/google) and link it to your locations. The game sends guests to the Google listing of their location. Without an active Google channel, guests see a message that the game isn't available.
 - Add the rewards to your POS system and tell your team how guests redeem them.
 
@@ -60,7 +60,7 @@ A guest can play the same game once every 24 hours with the same email address.
     Under **Appearance**, upload your **Logo** and set the **Primary color** and **Background color**. The preview shows how the game looks.
   </Step>
   <Step title="Add prizes">
-    Under **Outcomes**, click **Add prize** and choose one of your offers. To create a new offer on the spot, choose **New prize**.
+    Under **Outcomes**, click **Add prize** and choose one of your offers. Use **Search offers** to find an offer by name. To create a new offer on the spot, choose **New prize**.
   </Step>
   <Step title="Save">
     Click **Save**.
@@ -81,7 +81,9 @@ Each outcome is a slice of the wheel. For each outcome, you set:
 
 The **No prize** outcome shows "Better luck next time" by default. Set its chance to 0% if every guest should win something.
 
-A game needs at least one prize. To change the email guests receive for a prize, click **Configure email** on its row. This edits the email template of the offer. See [Offers](/loyalty/offers#customize-the-voucher-email).
+A game needs at least one prize. **Add prize** only lists active offers. When you deactivate an offer that is already a prize, the game skips it when the wheel is spun. See [Activate or deactivate an offer](/loyalty/offers#activate-or-deactivate-an-offer).
+
+To change the email guests receive for a prize, edit the voucher email of the offer. See [Customize the voucher email](/loyalty/offers#customize-the-voucher-email).
 
 {/* SCREENSHOT: /settings/games/<id> — the Outcomes table, highlight the Chance column and Add prize */}
 <Frame>
