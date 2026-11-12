@@ -11,51 +11,9 @@ If you run your loyalty program in Leat, you can connect it to Feedelity. Your L
 
 ## Connect Leat
 
-Feedelity connects to Leat with a personal access token. You create it in your Leat dashboard, in a private app for Feedelity.
+Connect your Leat account first. You need a personal access token from your Leat dashboard. See [Leat](/integrations/leat) for the steps.
 
-### Create a personal access token in Leat
-
-<Steps>
-  <Step title="Open the integrations in Leat">
-    Sign in to your [Leat dashboard](https://business.leat.com) and go to **Apps** > **Integrations**. The **Marketplace** page opens.
-  </Step>
-  <Step title="Create a private app">
-    Click **Create private app** at the top right. Enter a **Name** you'll recognize, such as "Feedelity", and click **Create**.
-  </Step>
-  <Step title="Open the Auth tab">
-    In the menu on the left, click the app under **Installed** and open the **Auth** tab. A new app shows "There are no active personal access tokens for this private app".
-  </Step>
-  <Step title="Create the token">
-    Click **Create personal access token**. Leat lets you choose when the token expires. Pick a date far enough ahead, or no expiry at all.
-  </Step>
-  <Step title="Copy the token">
-    Copy the token right away and keep it somewhere safe until you paste it into Feedelity. Leat shows the full token only once.
-  </Step>
-</Steps>
-
-Once the token is created, the **Auth** tab lists it with its expiry, for example **Never expires**. Click **Rotate** to replace the token with a new one.
-
-<Warning>
-  Feedelity loses access to your Leat account when the token expires or when you rotate it. Your promotions then stop updating, and Feedelity can no longer create Leat vouchers for guests who win in your games. Only rotate the token when you're ready to connect the new token in Feedelity.
-</Warning>
-
-{/* TODO: document how to replace a rotated or expired Leat token in Feedelity once reconnecting a Leat account is possible. Confirm the expiry options in the Create personal access token dialog and what the Rotate menu offers */}
-
-### Connect the token in Feedelity
-
-<Steps>
-  <Step title="Start connecting in Feedelity">
-    Go to **Settings** > **Offers** and click **Connect loyalty platform**. You can also go to **Settings** > **Integrations** and click **Add integration**.
-  </Step>
-  <Step title="Choose Leat">
-    Choose **Leat**. The **Connect with Leat** screen opens.
-  </Step>
-  <Step title="Paste the token">
-    Paste the token into **Personal access token** and click **Continue**.
-  </Step>
-</Steps>
-
-Feedelity imports all your Leat promotions right away. After that, Feedelity checks Leat for new and changed promotions every 15 minutes.
+When you connect, Feedelity imports all your Leat promotions right away. After that, Feedelity checks Leat for new and changed promotions every 15 minutes.
 
 ## Your promotions in Feedelity
 
@@ -88,9 +46,3 @@ When a guest wins a Leat promotion in one of your games:
 The voucher is listed under **Settings** > **Vouchers**, like every other voucher, and in your Leat dashboard.
 
 {/* TODO: confirm with Leat whether Leat also emails the guest when a voucher is created */}
-
-## Your Leat account in Feedelity
-
-Go to **Settings** > **Integrations** and click your Leat account. The **Offers** section lists all promotions from this account. Click **View all offers** to open the offers list.
-
-To disconnect Leat, delete the integration. See [Delete an integration](/integrations/manage#delete-an-integration).

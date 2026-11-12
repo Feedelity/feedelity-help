@@ -1,0 +1,82 @@
+---
+title: "Feedelity offers"
+description: "Create rewards in Feedelity, with codes that Feedelity generates or your own codes."
+---
+
+A Feedelity offer is an offer you create and manage in Feedelity. You choose whether Feedelity generates the voucher codes or you use your own codes from your POS or loyalty system. For what all offers have in common, such as statuses, warnings, and the voucher email, see [Offers](/loyalty/offers).
+
+## Create an offer
+
+<Steps>
+  <Step title="Start a new offer">
+    Go to **Settings** > **Offers** and click **New offer**. The **New Feedelity offer** page opens.
+  </Step>
+  <Step title="Name and describe the offer">
+    Enter a **Name**, shown as the title of the voucher. Enter a **Description**, shown to guests on their voucher.
+  </Step>
+  <Step title="Choose where the codes come from">
+    Under **Voucher codes**, choose **Generate automatically** or **Use my own codes**. See [Voucher codes](#voucher-codes).
+  </Step>
+  <Step title="Create the offer">
+    Click **Create offer**.
+  </Step>
+</Steps>
+
+Put everything the guest needs to know in the description: what they get, any minimum spend, how long the voucher is valid, and how to redeem it. For example: "Enjoy a free drink of your choice with any purchase. Show this code at the counter. Minimum purchase of €10."
+
+New offers are active right away.
+
+{/* SCREENSHOT: /settings/offers/new — the new offer form with both code options */}
+<Frame>
+  <img src="/images/loyalty/offers/new.png" alt="The new offer form with both voucher code options" width="784" />
+</Frame>
+
+## Voucher codes
+
+Every voucher comes with a code the guest shows at checkout to redeem it. You choose where the codes come from:
+
+- **Generate automatically**: Feedelity creates a unique code for every voucher. You find every code on the [Vouchers](/loyalty/vouchers) page.
+- **Use my own codes**: paste codes from your POS or loyalty system, one per line. Feedelity takes the next available code for each voucher, so a code is never used twice.
+
+On the offer page, the **Voucher codes** section shows which option the offer uses. For automatically generated codes, a banner confirms that Feedelity creates the codes. For your own codes, the section lists your codes.
+
+### Switch how codes are made
+
+You can change the option after you create the offer:
+
+<Steps>
+  <Step title="Edit the offer">
+    Open the offer, click **⋯**, and choose **Edit offer**.
+  </Step>
+  <Step title="Choose the new option">
+    Under **Voucher codes**, choose **Generate automatically** or **Use my own codes**.
+  </Step>
+  <Step title="Save">
+    Click **Save changes**.
+  </Step>
+</Steps>
+
+The switch only applies to new vouchers. Vouchers you already issued keep their code.
+
+- **From your own codes to automatic**: your unused codes are kept. When you switch back, Feedelity uses them again.
+- **From automatic to your own codes**: if you have no unused codes yet, the offer page shows **Add your own codes**. Guests can't receive vouchers for this offer until you add codes.
+
+### Manage your own codes
+
+For offers with your own codes, the **Voucher codes** section lists every code with its status: **Available** or **Issued**. Click an issued code to view its voucher. Under the list, you see how many codes are still available, for example "12 of 50 codes available".
+
+- **Search codes**: find a code in the list.
+- **Add codes**: paste more codes, one per line. You can add up to 5,000 codes at a time. Feedelity skips duplicates and codes the offer already has.
+- **Export**: download the codes.
+
+When an offer has no codes at all, the section shows **Add your own codes** with an **Add codes** button.
+
+{/* TODO: confirm what a guest sees when they win an offer that has no codes left */}
+
+{/* SCREENSHOT: /settings/offers/<id> — offer page with the Voucher codes section and the code list */}
+
+## Edit or delete an offer
+
+The **Details** section of the offer page shows the **Name** and **Description**. To change them, open the offer, click **⋯**, and choose **Edit offer**. Change the details and click **Save changes**.
+
+To delete the offer, click **⋯** and choose **Delete offer**. This permanently removes the offer and its codes. You can't delete an offer once vouchers have been issued for it. [Deactivate it](/loyalty/offers#activate-or-deactivate-an-offer) instead.

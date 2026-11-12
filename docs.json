@@ -43,14 +43,15 @@
         "pages": [
           "integrations/how-integrations-work",
           "integrations/manage",
-          "integrations/google",
+          "integrations/deliveroo",
           "integrations/facebook",
+          "integrations/google",
           "integrations/instagram",
+          "integrations/just-eat",
+          "integrations/leat",
           "integrations/outlook",
           "integrations/tripadvisor",
           "integrations/uber-eats",
-          "integrations/deliveroo",
-          "integrations/just-eat",
           "integrations/zenchef"
         ]
       },
@@ -126,8 +127,9 @@
           "loyalty/games",
           {
             "group": "Offers",
+            "root": "loyalty/offers",
             "pages": [
-              "loyalty/offers",
+              "loyalty/feedelity-offers",
               "loyalty/leat"
             ]
           },
