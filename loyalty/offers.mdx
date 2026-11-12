@@ -129,18 +129,37 @@ When an offer is inactive:
 
 ## Customize the voucher email
 
-Every guest who receives an offer gets an email with their personal code. The **Voucher email** section on the offer page shows a preview with an example code. To change the email, click **Edit email**.
+Every guest who receives an offer gets an email with their personal code. Each offer has its own voucher email, so every game that uses the offer sends the same email. This also applies to [Leat promotions](/loyalty/leat).
 
-You can edit the **Subject** and the **Body**. Use these placeholders to add offer and voucher details:
+You don't have to set anything up. Every new offer starts with a ready-made email: the subject is the name of the offer, and the body shows the name, the description, and the guest's code. The **Voucher email** section on the offer page shows a preview with an example code.
+
+### Edit the email
+
+<Steps>
+  <Step title="Open the editor">
+    Go to **Settings** > **Offers**, open the offer, and click **Edit email** in the **Voucher email** section.
+  </Step>
+  <Step title="Change the subject and body">
+    Edit the **Subject** and the **Body**. The body is written in HTML. To keep the layout intact, change only the text between the tags.
+  </Step>
+  <Step title="Add placeholders">
+    Click in the **Subject** or **Body** to show the placeholders, then click one to insert it where your cursor is. Hover over a placeholder to see **What it is** and **How to use it**.
+  </Step>
+  <Step title="Check and save">
+    Click **Show preview** to see the result with an example code, then click **Save**.
+  </Step>
+</Steps>
+
+These placeholders are filled in for every guest:
 
 | Placeholder | What it is |
 | --- | --- |
 | **Name** | The name of your offer |
-| **Description** | The description of your offer. Use it in the body only. |
-| **Code** | The guest's voucher code |
-| **QR code** | The guest's voucher code as a QR code. Use it in the body only. |
+| **Description** | The description of your offer, with everything the guest gets. Use it in the body only. |
+| **Code** | The guest's voucher code. In the body, you can also use it in a link. |
+| **QR code** | The guest's voucher code as a QR code image. Use it in the body only. |
 
-Click **Show preview** to see the result, then click **Save**.
+If a placeholder is written incorrectly, the editor shows a warning and **Save** stays disabled until you fix it. If you close the editor with unsaved changes, Feedelity asks **Discard changes?** first. Click **Keep editing** to go back to your changes.
 
 {/* SCREENSHOT: /settings/offers/<id> — the Email template dialog with placeholders and preview */}
 
