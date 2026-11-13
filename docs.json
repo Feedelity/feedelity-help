@@ -106,6 +106,12 @@
         ]
       },
       {
+        "group": "Presence",
+        "pages": [
+          "presence/listings"
+        ]
+      },
+      {
         "group": "Automation",
         "pages": [
           "automation/auto-reply",
