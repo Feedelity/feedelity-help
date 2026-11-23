@@ -106,9 +106,16 @@
         ]
       },
       {
-        "group": "Presence",
+        "group": "Online presence",
         "pages": [
-          "presence/listings"
+          {
+            "group": "Listings",
+            "pages": [
+              "presence/listings",
+              "presence/listings/update-many-listings"
+            ]
+          },
+          "presence/posts"
         ]
       },
       {
